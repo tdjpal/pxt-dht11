@@ -53,21 +53,15 @@ namespace dht11 {
     export function ReadFromSensor() {
         DTH11value=dht11_read();
     }
-
-    /**
-     * Returns previously read temperature()
-     * Do not forget to call ReadFromSensor() to get current ones 
-     */
-    //% block
+    
+    //% block="温度"
+    //% blockId=temperature
     export function temperature(): number {
         return (DTH11value & 0x0000ff00) >> 8;
     }
 
-    /**
-     * Returns previously read humidity()
-     * Do not forget to call ReadFromSensor() to get current ones 
-     */
-    //% block
+    //% block="湿度"
+    //% blockId=humidity
     export function humidity(): number {
         return DTH11value >> 24
     }
