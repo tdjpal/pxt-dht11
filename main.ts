@@ -1,4 +1,4 @@
-//% color=#f44242 icon="\uf197" block="Let's Talk Science"
+//% color=#f44242 icon="\uf197" block="DHT11温湿度"
 namespace dht11 {
     let pin = DigitalPin.P0;
     let DTH11value = 0;
@@ -14,7 +14,7 @@ namespace dht11 {
      * Set pin at which the DHT data line is connected
      * @param pin_arg pin at which the DHT data line is connected
      */
-    //% block="DHT11 set pin %pinarg"
+    //% block="DHT11引脚 %pinarg"
     //% blockId=dht11_set_pin
     export function set_pin(pin_arg: DigitalPin): void {
         pin = pin_arg;
